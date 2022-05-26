@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background-image: url(./images/dino-reichmuth-A5rCN8626Ck-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+}
+.main-div {
+  padding: 20px 10px;
+  box-shadow: 0 8px 16px 0 rgba(242, 61, 61, 0.2),
+    80px 50px 80px 100px rgba(247, 80, 80, 0.19);
+}
+h1 {
+  font-size: 6rem;
+  color: rgb(191, 185, 185);
+}
+
+.from,
+.to {
+  background-color: rgb(240, 66, 66);
+  font-size: 2rem;
+  color: #fff;
+  padding: 10px;
+}
+
+#from,
+#to {
+  font-size: 2rem;
+  padding: 10px 15px;
+}
+
+input {
+  transition: all 1s;
+}
+
+input[type="text"]:focus {
+  height: 50px;
+  margin: 10px 10px;
+  padding: 10px;
+  background-color: grey;
+  color: rgb(251, 119, 119);
+  border: 3px solid red;
+  outline: none;
+}
+
+/* button styles */
+.button-1,
+.button-2 {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.button-1 {
+  background-color: whitesmoke;
+  color: rgb(244, 15, 15);
+  border: 3px solid rgb(248, 84, 84);
+  opacity: 0.7;
+  outline: none;
+  margin-left: 60%;
+}
+.button-1 span,
+.button-2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-1 span::after,
+.button-2 span::after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-1:hover span,
+.button-2:hover span {
+  padding-right: 20px;
+}
+
+.button-1:hover span::after,
+.button-2:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-2 {
+  color: rgb(249, 241, 241);
+  background-color: red;
+  outline: none;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-position: left;
+  }
+  .main-container {
+    display: block;
+    top: 20%;
+    right: 0;
+    left: 0;
+  }
+
+  .main-div {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  input[type="text"]:focus {
+    margin: 20px 10px;
+  }
+}
